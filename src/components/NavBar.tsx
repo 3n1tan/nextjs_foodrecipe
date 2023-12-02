@@ -27,7 +27,7 @@ const NavBar = () => {
             </NavbarMenu>
             <NavbarContent className='sm:flex hidden ' justify='end' >
                 <NavbarItem>
-                    <Link href='/' className='md:text-xl sm:text-xl tracking-wide hover:text-red-600'>Homehh</Link>
+                    <Link href='/' className='md:text-xl sm:text-xl tracking-wide hover:text-red-600'>Home</Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link href='/recipelist' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Recipe List</Link>
