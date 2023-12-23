@@ -19,7 +19,7 @@ const NavBar = () => {
                     <Link href='/'>Home</Link>
                 </NavbarMenuItem>
                 <NavbarMenuItem className='mb-5'>
-                    <Link href='/recipelist'>Recipe List</Link>
+                    <Link href='/recipe'>Recipe List</Link>
                 </NavbarMenuItem>
                 <NavbarMenuItem className='mb-5'>
                     <Link href='/projects'>Create Recipe</Link>
@@ -30,7 +30,7 @@ const NavBar = () => {
                     <Link href='/' className='md:text-xl sm:text-xl tracking-wide hover:text-red-600'>Home</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href='/recipelist' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Recipe List</Link>
+                    <Link href='/recipe' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Recipe List</Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link href='/projects' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Create Recipe</Link>
