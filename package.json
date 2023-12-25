@@ -11,10 +11,14 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "@prisma/client": "^5.6.0",
+    "axios": "^1.6.2",
     "framer-motion": "^10.6.8",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
+    "update": "^0.4.2",
+    "upgrade": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

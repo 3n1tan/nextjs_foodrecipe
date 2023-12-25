@@ -22,7 +22,7 @@ const NavBar = () => {
                     <Link href='/recipe'>Recipe List</Link>
                 </NavbarMenuItem>
                 <NavbarMenuItem className='mb-5'>
-                    <Link href='/projects'>Create Recipe</Link>
+                    <Link href='/create'>Create Recipe</Link>
                 </NavbarMenuItem>
             </NavbarMenu>
             <NavbarContent className='sm:flex hidden ' justify='end' >
@@ -33,7 +33,7 @@ const NavBar = () => {
                     <Link href='/recipe' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Recipe List</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href='/projects' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Create Recipe</Link>
+                    <Link href='/create' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Create Recipe</Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent className='sm:hidden flex' justify='end'>
