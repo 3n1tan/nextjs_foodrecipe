@@ -11,7 +11,7 @@ const RecipeCard = ({image, title}: RecipeCardProps) => {
   return (
     <div>
       <Card isFooterBlurred radius='sm' className='border-none w-[250px]'>
-        <Image 
+        <img 
             src={image}
             alt='continental_cuisine'
             height={200}

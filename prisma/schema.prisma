@@ -19,7 +19,6 @@ model recipe {
   originalURL String?
   ingredients recipeIngredient[]
   steps String[]
-  timers Int[]
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

@@ -54,7 +54,7 @@ interface IngredientInput {
   }
   
 
-export const PATCH = async (request: NextRequest, { params }: { params: { id: string } }) => {
+  export const PATCH = async (request: NextRequest, { params }: { params: { id: string } }) => {
     try {
         const body = await request.json();
         const { name, author, origin, imageURL, originalURL, ingredients, steps, timers } = body;

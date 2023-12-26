@@ -14,7 +14,7 @@ interface IngredientInput {
 export const POST = async (request: NextRequest) => {
     try {
         const body = await request.json();
-        const { name, author, origin, imageURL, originalURL, ingredients, steps, timers } = body;
+        const { name, author, origin, imageURL, originalURL, ingredients, steps } = body;
 
         const newRecipe = await prisma.recipe.create({
             data: {
@@ -30,8 +30,7 @@ export const POST = async (request: NextRequest) => {
                         type: ingredient.type,
                     })),
                 },
-                steps,
-                timers,
+                steps
             },
         });
 
