@@ -9,6 +9,9 @@ export const GET =async (request: NextRequest, { params }: { params: {id: string
         const recipes = await prisma.recipe.findUnique({
             where: {
                 id
+            },
+            include: {
+                ingredients: true,
             }
         });
 

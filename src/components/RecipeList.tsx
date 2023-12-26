@@ -10,7 +10,6 @@ interface Recipe {
   imageURL: string;
   originalURL: string;
   steps: string[];
-  timers: number[]
   ingredients: Object[]
 }
 
@@ -27,8 +26,8 @@ const RecipeList = ({recipeData}: RecipeListProps) => {
             <RecipeCard 
               title={item.name}
               image={item.imageURL}
+              id={item.id}
             />
-
           </div>
         ))
       ) : (
