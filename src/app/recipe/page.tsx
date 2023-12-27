@@ -16,26 +16,11 @@ async function fetchData() {
 
 const RecipePage = async () => {
     let recipeData = await fetchData();
-    console.log(recipeData);
+    // console.log(recipeData);
 
   return (
     <>
         <div className='flex flex-row'>
-            {/* <p>Recipe list will be displayed here</p>
-            {Array.isArray(recipeitems) ? (
-            recipeitems.map(item => (
-            // Render your components based on the data
-            <div key={item.id}>
-                <RecipeCard 
-                    title={item.name}
-                    image={item.imageURL}        
-                />
-            </div>
-            ))
-        ) : (
-            <p>No data available</p>
-        )}    */}
-
             <RecipeList recipeData={recipeData} />
         </div>
 
