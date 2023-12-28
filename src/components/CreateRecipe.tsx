@@ -124,7 +124,6 @@ const CreateRecipe = () => {
                     <div>
                     {/* Render existing steps */}
                     {/* Button to add a new step */}
-                    <Button onClick={handleAddStep} color='primary'>Add Step</Button>
                         {steps.map((step, index) => (
                             <div key={index} className='flex'>
                                 <Input
@@ -142,13 +141,13 @@ const CreateRecipe = () => {
                                 </div>
                             </div>
                         ))} 
+                        <Button onClick={handleAddStep} color='primary' className='mt-8'>Add Step</Button>
                     </div>
                     <div>
-                        <Button onClick={handleAddIngredient} color='primary' className='mt-8'>Add Ingredient</Button>
                         {Array.isArray(ingredients) && (
                             ingredients.map((ingredient, index) => (
                                 <div key={index} className='flex'>
-                                    <div className=''>
+                                    <div className='mt-8'>
                                         <Input 
                                             {...register(`ingredients[${index}].quantity`)}
                                             isRequired
@@ -187,8 +186,9 @@ const CreateRecipe = () => {
                                     </div>
                                 </div>
                             ))
-                        )}
+                            )}
                     </div>
+                            <Button onClick={handleAddIngredient} color='primary' className='mt-8'>Add Ingredient</Button>
                 </div>
                     <Button type='submit' className='mt-5 col-span-2' color='success'>Submit</Button>
             </div>

@@ -39,7 +39,6 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
     <Fragment>
       <div className='flex justify-center'>   
           <Card className='max-w-2xl mt-9 pb-9 rounded-xl shadow-2xl'>
-            <div>
               <CardHeader className='p-0'>
                 <img 
                   src={recipeDetailData.imageURL} 
@@ -70,7 +69,7 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
                 <Divider className="my-4" />
                 <div className="grid grid-cols-4">
                   <div className='ml-6'>
-                    <p className='uppercase mb-5 text-lg tracking-wider'>Ingredients</p>
+                    <p className='uppercase mb-5 text-lg tracking-wider italic text-red-500'>Ingredients</p>
                     <ul>
                       {recipeDetailData.ingredients.map((ingredient: Ingredient ) => (
                         <li key={ingredient.id} className='mb-2 list-disc'>
@@ -81,7 +80,7 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
                   </div>
                     <Divider orientation='vertical' className='grid-flow-col ml-9' />
                   <div className='col-span-2 ml-[-5em]'>
-                    <p className='uppercase mb-5 text-lg tracking-wider'>Steps</p>
+                    <p className='uppercase mb-5 text-lg tracking-wider italic text-red-500'>Steps</p>
                     <ul>
                       {recipeDetailData.steps.map((step: string, index: number) => (
                         <li key={index} className='mb-5 list-disc'>
@@ -91,9 +90,7 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
                     </ul>             
                   </div>                 
                 </div>
-
               </CardBody>
-            </div>
             <CardFooter className='flex justify-center'>
               <BackButton />
             </CardFooter>
