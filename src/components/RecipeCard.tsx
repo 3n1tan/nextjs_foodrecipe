@@ -10,11 +10,11 @@ interface RecipeCardProps {
 const RecipeCard = ({image, title, id}: RecipeCardProps) => {
   return (
     <div>
-      <Card isFooterBlurred radius='sm' className='border-none w-[30rem]'>
+      <Card isFooterBlurred radius='sm' className='border-none w-[20rem] h-[20rem]'>
         <Image 
             src={image}
             alt='continental_cuisine'
-            className='rounded'
+            className='rounded h-[30rem] w-[30rem]'
             style={{
               objectFit: "cover"
             }}

@@ -16,16 +16,14 @@ async function fetchData() {
 
 const RecipePage = async () => {
     let recipeData = await fetchData();
-    // console.log(recipeData);
-
   return (
-    <>
-        <div className='flex flex-row'>
+    <div>
+        <div className=''>
             <RecipeList recipeData={recipeData} />
         </div>
 
         
-    </>
+    </div>
   )
 }
 

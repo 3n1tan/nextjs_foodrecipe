@@ -18,23 +18,25 @@ interface RecipeListProps {
 }
 const RecipeList = ({recipeData}: RecipeListProps) => {
   return (
-    <div>
+    <div className=''>
       <h1>Listed below are our recipe cards</h1>
-      {Array.isArray(recipeData) ? (
-        recipeData.map(item => (
-          <div key={item.id}>
-            <RecipeCard 
-              title={item.name}
-              image={item.imageURL}
-              id={item.id}
-            />
+      <div className='flex gap-2 justify-around'>
+        {Array.isArray(recipeData) ? (
+          recipeData.map(item => (
+            <div key={item.id} className=''>
+              <RecipeCard 
+                title={item.name}
+                image={item.imageURL}
+                id={item.id}
+              />
+            </div>
+          ))
+        ) : (
+          <div>
+            <Spinner />
           </div>
-        ))
-      ) : (
-        <div>
-          <Spinner />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }
