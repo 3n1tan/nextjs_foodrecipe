@@ -17,8 +17,8 @@ async function fetchData() {
 const RecipePage = async () => {
     let recipeData = await fetchData();
   return (
-    <div>
-        <div className=''>
+    <div className='bg-blue-100 min-h-screen'>
+        <div className='mb-5 pb-10'>
             <RecipeList recipeData={recipeData} />
         </div>
 

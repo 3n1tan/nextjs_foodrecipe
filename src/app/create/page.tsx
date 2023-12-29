@@ -3,7 +3,7 @@ import React from 'react'
 
 const newRecipePage = () => {
   return (
-    <div>
+    <div className='bg-yellow-100 min-h-screen'>
         <CreateRecipe />
     </div>
   )

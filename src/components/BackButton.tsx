@@ -8,7 +8,7 @@ const BackButton = () => {
 
   return (
     <div>
-        <Button onClick={() => router.push('/recipe')} color='warning' variant='flat'>
+        <Button onClick={() => router.push('/recipe')} color='warning' variant='flat' className='text-red-600'>
             Back To Recipe List
         </Button>
     </div>

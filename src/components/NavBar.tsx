@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Link } from '@nextui-org/react'
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    
   return (
     <div className='w-full'>
         <Navbar className='flex w-full justify-around items-center md:py-6 md:px-6' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='full'>
@@ -27,13 +28,13 @@ const NavBar = () => {
             </NavbarMenu>
             <NavbarContent className='sm:flex hidden ' justify='end' >
                 <NavbarItem>
-                    <Link href='/' className='md:text-xl sm:text-xl tracking-wide hover:text-red-600'>Home</Link>
+                    <Link href='/' className='md:text-xl sm:text-xl tracking-wide hover:text-red-600 text-black'>Home</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href='/recipe' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Recipe List</Link>
+                    <Link href='/recipe' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600 text-black'>Recipe List</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href='/create' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600'>Create Recipe</Link>
+                    <Link href='/create' className='md:text-xl sm:text-xl tracking-wide ml-9 hover:text-red-600 text-black'>Create Recipe</Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent className='sm:hidden flex' justify='end'>

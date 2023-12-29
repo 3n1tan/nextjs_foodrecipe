@@ -36,9 +36,9 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
   const date = new Date(recipeDetailData.createdAt) ;
 
   return (
-    <Fragment>
+    <div className='min-h-full'>
       <div className='flex justify-center'>   
-          <Card className='max-w-2xl mt-9 pb-9 rounded-xl shadow-2xl'>
+          <Card className='max-w-2xl mt-9 pb-9 rounded-xl shadow-2xl mb-9'>
               <CardHeader className='p-0'>
                 <img 
                   src={recipeDetailData.imageURL} 
@@ -69,10 +69,10 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
                 <Divider className="my-4" />
                 <div className="grid grid-cols-4">
                   <div className='ml-6'>
-                    <p className='uppercase mb-5 text-lg tracking-wider italic text-red-500'>Ingredients</p>
+                    <p className='uppercase mb-5 sm:text-lg text-xs text-center tracking-wider italic text-red-500'>Ingredients</p>
                     <ul>
                       {recipeDetailData.ingredients.map((ingredient: Ingredient ) => (
-                        <li key={ingredient.id} className='mb-2 list-disc'>
+                        <li key={ingredient.id} className='mb-2 list-disc text-xs sm:text-lg'>
                           {ingredient.quantity} {ingredient.name} ({`${ingredient.type}`})
                         </li>
                       ))}
@@ -80,10 +80,10 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
                   </div>
                     <Divider orientation='vertical' className='grid-flow-col ml-9' />
                   <div className='col-span-2 ml-[-5em]'>
-                    <p className='uppercase mb-5 text-lg tracking-wider italic text-red-500'>Steps</p>
+                    <p className='uppercase mb-5 sm:text-lg text-xs text-center tracking-wider italic text-red-500'>Steps</p>
                     <ul>
                       {recipeDetailData.steps.map((step: string, index: number) => (
-                        <li key={index} className='mb-5 list-disc'>
+                        <li key={index} className='mb-5 list-disc text-xs sm:text-lg lg:ml-0 ml-10'>
                           {step}
                         </li>
                       ))}
@@ -96,8 +96,7 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
             </CardFooter>
           </Card>
       </div>
-
-    </Fragment>
+    </div>
   )
 }
 

@@ -10,7 +10,7 @@ interface RecipeCardProps {
 const RecipeCard = ({image, title, id}: RecipeCardProps) => {
   return (
     <div>
-      <Card isFooterBlurred radius='sm' className='border-none w-[20rem] h-[20rem]'>
+      <Card isFooterBlurred radius='sm' className='border-none md:w-[20rem] md:h-[20rem] sm:w-[17rem] sm:h-[17rem] w-[20em] h-[20em]'>
         <Image 
             src={image}
             alt='continental_cuisine'

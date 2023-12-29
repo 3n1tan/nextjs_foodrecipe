@@ -74,125 +74,129 @@ const CreateRecipe = () => {
 
 
   return (
-    <div className='w-full flex items-center justify-center rounded-xl shadow-inherit '>      
-        <form onSubmit={handleSubmit(onSubmit)} className='mb-8 mt-5 p-6 w-[75%] grid gap-6 border-solid border-2 rounded-xl shadow-2xl shadow-sky-300'>
-            <div className='grid grid-cols-2 gap-6'>
-                <div className=''>
-                    <Input 
-                        {...register('name')}
-                        isRequired
-                        type="text"
-                        label="Recipe Name"
-                        defaultValue=""
-                        className="max-w-xs w-full"
-                        labelPlacement='outside'
-                        size='sm'
-                    />
-                    <Input 
-                        isRequired
-                        type="text"
-                        label="Recipe Author"
-                        defaultValue=""
-                        className="max-w-xs"
-                        {...register('author')}
-                        labelPlacement='outside'
-                        size='sm'
-                    />
-                    <Input 
-                        isRequired
-                        type="text"
-                        label="Origin"
-                        defaultValue=""
-                        className="max-w-xs"
-                        {...register('origin')}
-                        labelPlacement='outside'
-                        size='sm'
-                    />
-                    <Input 
-                        isRequired
-                        type="text"
-                        label="Image Link"
-                        defaultValue=""
-                        className="max-w-xs"
-                        {...register('imageURL')}
-                        labelPlacement='outside'
-                        size='sm'
-                    />
-                </div>
+    <div className=''>
+        <h1 className='text-center text-3xl pt-[5rem] tracking-widest'>New Recipe Form</h1>     
+        <div className='rounded-xl shadow-inherit pt-[1rem] flex justify-center'> 
+            <form onSubmit={handleSubmit(onSubmit)} className='mb-8 p-6 sm:max-w-3xl max-w-sm grid gap-6 border-solid border-2 rounded-xl shadow-2xl shadow-sky-300 bg-purple-300'>
+                <div className='sm:grid sm:grid-cols-2 sm:gap-6'>
+                    <div className=''>
+                        <Input 
+                            {...register('name')}
+                            isRequired
+                            type="text"
+                            label="Recipe Name"
+                            defaultValue=""
+                            className="max-w-xs w-full"
+                            labelPlacement='outside'
+                            size='sm'
+                        />
+                        <Input 
+                            isRequired
+                            type="text"
+                            label="Recipe Author"
+                            defaultValue=""
+                            className="max-w-xs"
+                            {...register('author')}
+                            labelPlacement='outside'
+                            size='sm'
+                        />
+                        <Input 
+                            isRequired
+                            type="text"
+                            label="Origin"
+                            defaultValue=""
+                            className="max-w-xs"
+                            {...register('origin')}
+                            labelPlacement='outside'
+                            size='sm'
+                        />
+                        <Input 
+                            isRequired
+                            type="text"
+                            label="Image Link"
+                            defaultValue=""
+                            className="max-w-xs"
+                            {...register('imageURL')}
+                            labelPlacement='outside'
+                            size='sm'
+                        />
+                    </div>
 
-                <div className=''>
-                    <div>
-                    {/* Render existing steps */}
-                    {/* Button to add a new step */}
-                        {steps.map((step, index) => (
-                            <div key={index} className='flex'>
-                                <Input
-                                    {...register(`steps[${index}]`)}
-                                    isRequired
-                                    type="text"
-                                    label={`Step ${index + 1}`}
-                                    defaultValue={step}
-                                    className="max-w-xs mt-2"
-                                    onChange={(e) => handleStepChange({index})}
-                                    size='sm'
-                                />
-                                <div className='self-center ml-5'>
-                                    <Button onClick={()=>handleDeleteStep({index})} color='danger'>Delete Step</Button>
-                                </div>
-                            </div>
-                        ))} 
-                        <Button onClick={handleAddStep} color='primary' className='mt-8'>Add Step</Button>
-                    </div>
-                    <div>
-                        {Array.isArray(ingredients) && (
-                            ingredients.map((ingredient, index) => (
-                                <div key={index} className='flex'>
-                                    <div className='mt-8'>
-                                        <Input 
-                                            {...register(`ingredients[${index}].quantity`)}
-                                            isRequired
-                                            type='text'
-                                            label={`Quantity ${index + 1}`}
-                                            defaultValue={ingredient.quantity}
-                                            onChange={(e) => handleIngredientChange({index})}
-                                            size='sm'
-                                            className='mt-2'
-                                        />
-                                    
-                                        <Input 
-                                            {...register(`ingredients[${index}].name`)}
-                                            isRequired
-                                            type='text'
-                                            label={`Name ${index + 1}`}
-                                            defaultValue={ingredient.name}
-                                            onChange={(e) => handleIngredientChange({index})}
-                                            size='sm'
-                                            className='mt-2'
-                                        />
-                
-                                        <Input 
-                                            {...register(`ingredients[${index}].type`)}
-                                            isRequired
-                                            type='text'
-                                            label={`Type ${index + 1}`}
-                                            defaultValue={ingredient.type}
-                                            onChange={(e) => handleIngredientChange({index})}
-                                            size='sm'
-                                            className='mt-2'
-                                        />
-                                    </div>
+                    <div className=''>
+                        <div>
+                        {/* Render existing steps */}
+                        {/* Button to add a new step */}
+                            {steps.map((step, index) => (
+                                <div key={index} className='flex items-center'>
+                                    <Input
+                                        {...register(`steps[${index}]`)}
+                                        isRequired
+                                        type="text"
+                                        label={`Step ${index + 1}`}
+                                        defaultValue={step}
+                                        className="sm:max-w-xs mt-2 w-[10rem]"
+                                        onChange={(e) => handleStepChange({index})}
+                                        size='sm'
+                                    />
                                     <div className='self-center ml-5'>
-                                        <Button onClick={() => handleRemoveIngredient({index})} color='danger'>Remove Ingredient</Button>
+                                        <Button onClick={()=>handleDeleteStep({index})} color='danger'>Delete Step</Button>
                                     </div>
                                 </div>
-                            ))
-                            )}
+                            ))} 
+                            <Button onClick={handleAddStep} color='primary' className='mt-2'>Add Step</Button>
+                        </div>
+                        <div>
+                            {Array.isArray(ingredients) && (
+                                ingredients.map((ingredient, index) => (
+                                    <div key={index} className='flex'>
+                                        <div className='mt-8'>
+                                            <Input 
+                                                {...register(`ingredients[${index}].quantity`)}
+                                                isRequired
+                                                type='text'
+                                                label={`Quantity ${index + 1}`}
+                                                defaultValue={ingredient.quantity}
+                                                onChange={(e) => handleIngredientChange({index})}
+                                                size='sm'
+                                                className='mt-2'
+                                            />
+                                        
+                                            <Input 
+                                                {...register(`ingredients[${index}].name`)}
+                                                isRequired
+                                                type='text'
+                                                label={`Name ${index + 1}`}
+                                                defaultValue={ingredient.name}
+                                                onChange={(e) => handleIngredientChange({index})}
+                                                size='sm'
+                                                className='mt-2'
+                                            />
+                    
+                                            <Input 
+                                                {...register(`ingredients[${index}].type`)}
+                                                isRequired
+                                                type='text'
+                                                label={`Type ${index + 1}`}
+                                                defaultValue={ingredient.type}
+                                                onChange={(e) => handleIngredientChange({index})}
+                                                size='sm'
+                                                className='mt-2'
+                                            />
+                                        </div>
+                                        <div className='self-center ml-5'>
+                                            <Button onClick={() => handleRemoveIngredient({index})} color='danger'>Remove Ingredient</Button>
+                                        </div>
+                                    </div>
+                                ))
+                                )}
+                        </div>
+                                <Button onClick={handleAddIngredient} color='primary' className='mt-2'>Add Ingredient</Button>
                     </div>
-                            <Button onClick={handleAddIngredient} color='primary' className='mt-8'>Add Ingredient</Button>
+                        <Button type='submit' className='mt-5 col-span-2 text-white sm:text-lg tracking-widest' color='success'>Submit</Button>
                 </div>
-                    <Button type='submit' className='mt-5 col-span-2' color='success'>Submit</Button>
-            </div>
-        </form>
+            </form>
+
+        </div>
 
     </div>
   )
