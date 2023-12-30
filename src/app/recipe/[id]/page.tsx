@@ -1,5 +1,5 @@
-import { Button, Divider } from '@nextui-org/react';
-import React, { Fragment } from 'react'
+import { Divider } from '@nextui-org/react';
+import React from 'react'
 import { FC } from 'react'
 import { Card, CardHeader, CardBody, CardFooter } from '@nextui-org/react';
 import BackButton from '@/components/BackButton';
@@ -31,12 +31,10 @@ async function fetchData(params: {id: string}) {
 const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
 
   let recipeDetailData = await fetchData(params)
-  // console.log(params.id)
-  // console.log(recipeDetailData.author)
   const date = new Date(recipeDetailData.createdAt) ;
 
   return (
-    <div className='min-h-full'>
+    <div className='min-h-screen'>
       <div className='flex justify-center'>   
           <Card className='max-w-2xl mt-9 pb-9 rounded-xl shadow-2xl mb-9'>
               <CardHeader className='p-0'>
@@ -50,8 +48,8 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
                 />
               </CardHeader>
               <CardBody>
-                <h1 className='text-[2.5rem] tracking-wider uppercase text-center font-light'>{recipeDetailData.name}</h1>
-                <div className="space-y-1 pl-5">
+                <h1 className='text-[2.5rem] tracking-wider uppercase text-center font-light italic leading-none'>{recipeDetailData.name}</h1>
+                <div className="space-y-1 pl-5 pb-5 sm:pb-0 mt-5">
                   <div className='flex items-center space-x-4 h-5'>
                     <div>
                       <h4 className="font-medium text-small text-default-400">Origin: {recipeDetailData.origin}</h4>

@@ -1,5 +1,3 @@
-import RecipeCard from '@/components/RecipeCard';
-import { title } from 'process';
 import React from 'react'
 import RecipeList from '@/components/RecipeList';
 
@@ -18,11 +16,10 @@ const RecipePage = async () => {
     let recipeData = await fetchData();
   return (
     <div className='bg-blue-100 min-h-screen'>
+        <h1 className='text-center pt-[2rem] sm:pt-[3rem] md:pt-[6rem] text-4xl font-extralight italic'>Our Recipe Database</h1>
         <div className='mb-5 pb-10'>
             <RecipeList recipeData={recipeData} />
-        </div>
-
-        
+        </div>       
     </div>
   )
 }
