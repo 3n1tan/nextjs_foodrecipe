@@ -77,7 +77,7 @@ const CreateRecipe = () => {
     <div className=''>
         <h1 className='text-center text-3xl pt-[5rem] tracking-widest'>New Recipe Form</h1>     
         <div className='rounded-xl shadow-inherit pt-[1rem] flex justify-center'> 
-            <form onSubmit={handleSubmit(onSubmit)} className='mb-8 p-6 sm:max-w-3xl max-w-sm grid gap-6 border-solid border-2 rounded-xl shadow-2xl shadow-sky-300 bg-purple-300'>
+            <form onSubmit={handleSubmit(onSubmit)} className='mb-8 p-6 sm:max-w-3xl max-w-sm grid gap-6 border-solid border-2 rounded-xl shadow-2xl shadow-sky-300 bg-gray-300'>
                 <div className='sm:grid sm:grid-cols-2 sm:gap-6'>
                     <div className=''>
                         <Input 
