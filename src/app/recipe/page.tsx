@@ -15,11 +15,14 @@ async function fetchData() {
 const RecipePage = async () => {
     let recipeData = await fetchData();
   return (
-    <div className='min-h-screen'>
-        <h1 className='text-center pt-[2rem] sm:pt-[3rem] md:pt-[6rem] text-4xl font-extralight italic'>Our Recipe Database</h1>
-        <div className='mb-5 pb-10'>
-            <RecipeList recipeData={recipeData} />
-        </div>       
+    <div className='min-h-screen max-w-full flex items-start justify-center'>
+        <div className='max-w-[1760px] flex-col justify-center'>
+            <h1 className='text-center pt-[2rem] sm:pt-[3rem] md:pt-[6rem] text-4xl font-extralight italic'>Our Recipe Database</h1>
+            <div className='mb-5 pb-10'>
+                <RecipeList recipeData={recipeData} />
+            </div>       
+
+        </div>
     </div>
   )
 }

@@ -15,13 +15,9 @@ const NavBar = () => {
     <div className='w-full'>
         <Navbar className='flex w-full justify-around items-center md:py-6 md:px-6' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='full'>
             <NavbarBrand>
-                <motion.div
-                    animate={{x: [0, 100, 0]} }
-                >
                 <Link href='/'>
                     <Image src={logo} alt='logo' width={300} className='pr-9'/>
                 </Link>
-                </motion.div>
             </NavbarBrand>
             <NavbarMenu className='flex items-center'>
                 <NavbarMenuItem className='mb-5 mt-5'>

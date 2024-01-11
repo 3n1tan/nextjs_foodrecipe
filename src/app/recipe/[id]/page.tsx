@@ -3,7 +3,7 @@ import React from 'react'
 import { FC } from 'react'
 import { Card, CardHeader, CardBody, CardFooter } from '@nextui-org/react';
 import BackButton from '@/components/BackButton';
-
+import { PageWrapper } from '@/app/page-wrapper';
 interface RecipeDetailsPage {
   params: {
     id: string
@@ -36,6 +36,7 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
   return (
     <div className='min-h-screen'>
       <div className='flex justify-center'>   
+        <PageWrapper>
           <Card className='max-w-2xl mt-9 pb-9 rounded-xl shadow-2xl mb-9'>
               <CardHeader className='p-0'>
                 <img 
@@ -93,6 +94,7 @@ const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
               <BackButton />
             </CardFooter>
           </Card>
+        </PageWrapper>
       </div>
     </div>
   )
