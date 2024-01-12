@@ -13,7 +13,7 @@ async function fetchData() {
     
 }
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 const RecipePage = async () => {
     let recipeData = await fetchData();

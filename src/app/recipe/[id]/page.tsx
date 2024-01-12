@@ -31,7 +31,7 @@ async function fetchData(params: {id: string}) {
   
 }
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
 
