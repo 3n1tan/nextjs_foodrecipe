@@ -8,7 +8,8 @@ const nextConfig = {
             }
         ]
 
-    }
+    },
+    env: { API_URL: "https://nextjs-foodrecipe.vercel.app/"}
 }
 
 module.exports = nextConfig

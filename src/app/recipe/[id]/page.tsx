@@ -18,8 +18,10 @@ interface Ingredient {
   recipeId: string;
 }
 
+const apiURL = process.env.API_URL;
+
 async function fetchData(params: {id: string}) {
-  const res = await fetch (process.env.URL + `/api/recipes/${params.id}`, { cache: 'no-store' });
+  const res = await fetch (apiURL + `/api/recipes/${params.id}`, { cache: 'no-store' });
 
   if(!res.ok) {
       throw new Error("Failed to fetch data")
