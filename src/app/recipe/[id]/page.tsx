@@ -28,6 +28,9 @@ async function fetchData(params: {id: string}) {
   return res.json();
   
 }
+
+export const dynamic = 'force-dynamic'
+
 const recipeDetailsPage: FC<RecipeDetailsPage> = async ({params}) => {
 
   let recipeDetailData = await fetchData(params)
