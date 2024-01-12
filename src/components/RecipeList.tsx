@@ -41,6 +41,7 @@ const images = {
     }
   }
 }
+
 const RecipeList = ({recipeData}: RecipeListProps) => {
   return (
     <div className='w-full'>
@@ -70,7 +71,6 @@ const RecipeList = ({recipeData}: RecipeListProps) => {
               </div>
             )}
           </div>
-
         </MotionDiv>
       </PageWrapper>
     </div>

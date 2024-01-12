@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project title
 
-## Getting Started
+Recipe App
 
-First, run the development server:
+# Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to the Global Recipe Hub, a culinary world tour at your fingertips! Our recipe app invites users to explore a vast collection of diverse and authentic recipes from every corner of the globe. Whether you're a seasoned chef or a novice in the kitchen, our platform is designed to inspire, educate, and connect food enthusiasts worldwide.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Key Features:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Explore Global Cuisine:
+    Browse through an extensive collection of recipes spanning continents, countries, and cultures.
+    Discover traditional dishes, regional specialties, and trending culinary creations.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- User-Submitted Recipes:
+    Empower users to contribute to the community by submitting their own favorite recipes.
 
-## Learn More
+- User-Friendly Interface:
+    Intuitive navigation for a seamless and enjoyable browsing experience.
+    Search and filter options based on cuisine.(Feature to be added on later updates)
 
-To learn more about Next.js, take a look at the following resources:
+- Recipe Details:
+    Each recipe page provides detailed instructions, ingredients, and nutritional information.
+    High-quality images to showcase the finished dish, enticing users to try new recipes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Recipe Submission Guidelines:
+    Provide a user-friendly recipe submission form with fields for ingredients, instructions, and additional details.
+    Moderation system to ensure the quality and authenticity of user-submitted recipes.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies used
+
+Built with:
+
+- Front-End/Back-End: NextJS (npm run dev)
+- Database: MongoDB, Prisma(database schema)
+- Styling: NextUI, Tailwind
+- Animation: Framer-Motion
+
+## Required Dependencies
+- create-next-app (run npx create-next-app@latest)
+
+## Live Page
+To try out this live page, click link below
+Live page [here]()
+
+## How to use App
+- From landing page, click on Recipe List to browse through recipe database.
+- To submit a new recipe, click on Create Recipe, a form with the following details
+will be provide;
+    Recipe Name:
+    Recipe Author: (Name of the user submitting this request)
+    Origin: (Country where recipe is originally from)
+    Image Link: Paste image link(sourced from internet, right click on image and select copy image address) of finished meal.
+    Add Ingredient section: Quantity could be written as 1kg, 2.5L, 2tbsp. Name of actual ingredient. Type could be written as fat if ingredient is butter, savoury cooking liquid for fish stock, starchy vegetable for potatoes, orange vegetable for carrot, seasoning for salt.
+
+## Setup and usage
+- Clone repo
+- Run "npm install", to install dependencies.
+- Run "npm run dev", to launch in developement mode.
+
+## Screenshot
+![Alt text](<public/assets/Screenshot 2024-01-12 at 2.52.11.png>)
+![Alt text](<public/assets/Screenshot 2024-01-12 at 2.52.37.png>)
+
+## Author
+Enitan Odupitan
+
+
+
